@@ -1,3 +1,4 @@
+//Write a program to reverse a string without using built-in methods.
 /*This program reverses a given string by iterating from 
 the last character to the first. It builds the reversed 
 string manually without using built-in string functions.*/
