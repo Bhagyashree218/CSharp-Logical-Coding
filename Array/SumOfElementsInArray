@@ -1,0 +1,30 @@
+//Sum of array Elements
+using System;
+
+public class SumOfElementsInArray
+{
+    static void Main(string[] args)
+    {
+        int[] arr = {12, 56, 34, 55, 78, 23, 32};
+        int sum = 0;
+        
+        foreach(int i in arr)
+        {
+           sum += i; 
+        }
+        
+        /*
+        for(int i = 0; i < arr.Length; i++)
+        {
+            sum += arr[i];
+        }
+        */
+        
+        Console.WriteLine("Sum = "+sum);
+    }
+}
+
+//o/p: Sum = 290
+//Time Complexity= O(n) → You traverse the array once
+//Space Complexity= → Only one variable 
+//using LINQ? = int sum = arr.Sum();
