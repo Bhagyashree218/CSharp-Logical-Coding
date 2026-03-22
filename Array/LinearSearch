@@ -1,0 +1,38 @@
+//Linear Search- if the element exist in array
+using System;
+
+public class LinearSearch
+{
+    static void Main(string[] args)
+    {
+        int[] arr = {12, 56, 34, 55, 78, 23, 32};
+        int key = 34;
+        bool found=false;
+        
+        for(int i = 0; i < arr.Length; i++)
+        {
+            if(arr[i]==key)
+            {
+                found=true;
+                break;
+            }
+        }
+        
+        if(found==true)
+            Console.WriteLine("Found");
+        else
+            Console.WriteLine("Not Found");
+    }
+}
+
+//o/p: Found
+
+/*
+Time Complexity:
+Best case: O(1) → element found at first index
+Worst case: O(n) → element at end / not present
+
+Space Complexity=O(1) → only one variable (found)
+
+*/
+
