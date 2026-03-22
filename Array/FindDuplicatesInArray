@@ -1,0 +1,50 @@
+//Find Duplicates In Array
+using System;
+
+public class FindDuplicatesInArray
+{
+    static void Main(string[] args)
+    {
+        int[] arr = {11,22,33,44,22,55,77,11,33,22,33,33,33};
+        
+        Console.Write("Duplicates: ");
+        
+        for(int i = 0; i < arr.Length-1; i++)
+        {
+            bool isDuplicate = false;
+            
+            for(int k=0; k<i; k++)
+            {
+                if(arr[i]==arr[k])
+                {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            
+            if(isDuplicate)
+                continue;
+            
+            for(int j=i+1; j<arr.Length; j++){  //j=i+1***
+                if(arr[i]==arr[j])
+                {
+                    Console.Write(arr[j]+" ");
+                    break;          //***
+                }
+            }
+        }
+    }
+}
+
+//o/p: Duplicates: 11 22 33 
+
+/*
+Time Complexity: O(n²)
+Outer loop → n
+Inner loops → up to n
+Overall: O(n²)
+
+Space Complexity: O(1)
+Only boolean + loop variables
+*/
+
