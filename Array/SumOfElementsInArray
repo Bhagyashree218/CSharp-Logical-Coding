@@ -26,5 +26,5 @@ public class SumOfElementsInArray
 
 //o/p: Sum = 290
 //Time Complexity= O(n) → You traverse the array once
-//Space Complexity= → Only one variable 
+//Space Complexity= O(1) → Only one variable 
 //using LINQ? = int sum = arr.Sum();
