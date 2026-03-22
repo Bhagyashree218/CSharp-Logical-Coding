@@ -1,0 +1,42 @@
+//Reverse the array using while loop
+using System;
+
+public class ReverseArrayWhileLoop
+{
+    static void Main(string[] args)
+    {
+        int[] arr = {12, 56, 34, 55, 78, 23, 32};
+        int left = 0;
+        int right = arr.Length-1;
+        
+        while(left<right)
+        {
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            
+            left++;
+            right--;
+        }
+       
+        /*
+        Console.WriteLine("Reversed Array:");
+        for(int i=0; i<arr.Length; i++)
+        {
+            Console.Write(arr[i]+ " ");
+        }
+        */
+        
+        Console.WriteLine();
+        Console.WriteLine("Reversed Array:");
+        foreach(int i in arr)
+        {
+            Console.Write(i+ " ");
+        }
+        
+    }
+}
+
+//o/p: Reversed Array: 32 23 78 55 34 56 12 
+//Time Complexity= O(n) — You traverse half the array (but Big-O ignores constants)
+//Space Complexity= O(1) — no extra space/memory used. Only variables: left, right, temp
